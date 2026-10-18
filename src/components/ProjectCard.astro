@@ -1,0 +1,6 @@
+---
+import type { Application } from '../data/content';
+interface Props { project: Application; }
+const { project } = Astro.props;
+---
+<article class="project-card"><div class="project-mark" aria-hidden="true"><span>{project.mark || 'LAB'}</span><span>{project.visualLabel || 'Innovation notebook'}</span></div><div class="project-content"><p class="small-label">{project.status}</p><h3><a href={`/applications/${project.slug}/`}>{project.title}</a></h3><p>{project.summary}</p><div class="tags">{project.technology.map(t => <span>{t}</span>)}</div><a class="text-link" href={`/applications/${project.slug}/`}>Explore project <span aria-hidden="true">↗</span></a></div></article>

@@ -1,0 +1,5 @@
+---
+interface Props { title: string; text: string; }
+const {title, text} = Astro.props;
+---
+<div class="empty-state"><span class="small-label">Collection note</span><h3>{title}</h3><p>{text}</p></div>
